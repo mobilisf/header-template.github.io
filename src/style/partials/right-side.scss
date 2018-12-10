@@ -1,0 +1,181 @@
+@import "partials/variables.scss";
+
+$color-font-time: $color-light-gray;
+$color-font-company: $color-blue;
+$color-font-position: $color-light-gray;
+$color-circle: $color-dark-blue;
+
+.right-side {
+    padding: 15px 75px 30px 10px;
+    font-family: "Open Sans";
+}
+
+.right__work-title .form-text__title:before {
+    content: url('../images/content_icons/bag-one.png');
+    margin-right: 20px;
+}
+
+.right__education-title .form-text__title:before {
+    content: url('../images/content_icons/bag-two.png');
+    margin-right: 20px;
+}
+
+.right__skills-title .form-text__title:before {
+    content: url('../images/content_icons/graphic.png');
+    margin-right: 20px;
+}
+
+.right-side {
+    .item--leftbar {
+        margin: 0 0 0 20px;
+        font-weight: 600;
+    }
+}
+
+.right__work-content,
+.right__education-content,
+.right__skills-content {
+    margin-left: 40px;
+}
+
+.right__work-content .work-item,
+.right__education-content .education-item {
+    display: grid;
+    grid-template-columns: 1fr minmax(150px, 10fr) minmax(auto, 265px);
+    column-gap: 10px;
+    margin: 21px 0;
+}
+
+.right__skills-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.right__skills-content .skills-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-item__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    z-index:12;
+}
+
+.skills-item__circle:after {
+    height: 82px;
+    width: 82px;
+    border-radius: 50%;
+    display: block;
+    content: "";
+    background: #fff;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+
+  }
+
+.skills-item__circle:before {
+    display: block;
+    position: absolute;
+    font-size: 24px;
+    z-index: 10;
+  }
+
+.form-shape__c-1:before {
+    content:"84%";
+}
+
+.form-shape__c-2:before {
+    content:"78%";
+}
+
+.form-shape__c-3:before {
+    content:"46%";
+}
+
+.form-shape__c-4:before {
+    content:"61%";
+}
+
+.form-shape__c-1 {
+    background-image: linear-gradient(230deg, transparent 50%, $color-circle 50%),
+linear-gradient(90deg, transparent 50%, $color-circle 50%);
+}
+
+.form-shape__c-2 {
+    background-image: linear-gradient(200deg, transparent 50%, $color-circle 50%),
+linear-gradient(90deg, transparent 50%, $color-circle 50%);
+}
+
+.form-shape__c-3 {
+    background-image: linear-gradient(140deg, transparent 50%, $color-circle 50%),
+linear-gradient(90deg, transparent 50%, $color-circle 50%);
+}
+
+.form-shape__c-4 {
+    background-image: linear-gradient(180deg, transparent 50%, $color-circle 50%),
+linear-gradient(90deg, transparent 50%, $color-circle 50%);
+}
+
+.work-item__time,
+.education-item__time {
+    margin: 10px 0;
+    color: $color-font-time;
+}
+.work-item__company,
+.education-item__company {
+    margin: 10px 0;
+    color: $color-font-company;
+}
+
+.work-item__position,
+.education-item__position {
+    margin: 10px 0;
+    color: $color-font-position;
+}
+
+.item--rightbar p {
+    margin: 10px 0;
+}
+
+.skills-item__subtitle-text {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+@media (max-width: 940px) {
+    .right-side {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 770px) {
+    .right__education-content,
+    .right__skills-content,
+    .right__work-content {
+        margin-left: 0;
+    }
+
+    .right__education-content .education-item,
+    .right__work-content .work-item {
+        grid-template-columns: 1fr minmax(150px, auto) 24fr;
+    }
+
+    .right__skills-content .skills-item {
+        margin: 0 15px 15px 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .right-side {
+        padding: 10px 10px;
+    }
+}

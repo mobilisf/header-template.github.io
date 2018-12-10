@@ -1,0 +1,98 @@
+@import "partials/variables.scss";
+
+$color-font-time: $color-light-gray;
+$color-font-name: $color-blue;
+$color-font-position: $color-light-gray;
+
+.left-side {
+    padding: 15px 10px 30px 75px;
+    font-family: "Open Sans";
+}
+
+.left__profile-title .form-text__title:before {
+    content: url('../images/content_icons/bag-one.png');
+    margin-right: 20px;
+}
+
+.left__interests-title .form-text__title:before {
+    content: url('../images/content_icons/bag-one.png');
+    margin-right: 20px;
+}
+
+.left__reference-title .form-text__title:before {
+    content: url('../images/content_icons/bag-one.png');
+    margin-right: 20px;
+}
+
+.left__awards-title .form-text__title:before {
+    content: url('../images/content_icons/bag-one.png');
+    margin-right: 20px;
+}
+
+.left__interests-content {
+    display: flex;
+    justify-content: space-between;
+
+    .music-text,
+    .gaming-text,
+    .biking-text {
+        margin: 10px 0;
+        font-family: "Open Sans - Semibold";
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+
+.reference-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.reference-item__content {
+    margin-left: 30px;
+}
+
+.reference-item__time {
+    margin: 10px 0;
+    color: $color-font-time;
+}
+
+.reference-item__name {
+    margin: 10px 0;
+    color: $color-font-name;
+}
+
+.reference-item__position {
+    margin: 10px 0;
+    color: $color-font-position;
+}
+
+.left__awards-content {
+    font-weight: 600;
+}
+
+@media (max-width: 940px) {
+    .left-side {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 770px) {
+    .left__interests-content {
+        justify-content: flex-start;
+    }
+
+    .left__interests-content div{
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .left-side {
+        padding: 10px 10px;
+    }
+}
