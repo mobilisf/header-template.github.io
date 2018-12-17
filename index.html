@@ -3,74 +3,79 @@
 <head lang="eng">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Application form for LightBox</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Application form for LiteBox</title>
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 </head>
     <body>
-        <div class="form-wrapper">
-            <section class="header-wrap">
+        <main class="form">
+            <header class="header-wrap">
+                <div class="header-wrap__background"></div>
                 <div class="header">
                     <div class="header__content">
                         <div class="header__content-avatar">
-                            <img src="images/header/avatar.jpg" alt="" class="avatar-image">
+                            <img src="images/header/avatar.jpg" alt="" class="header__content-avatar-img">
                         </div>
                         <div class="header__content-title">
-                            <div class="header__content-name">Nikita Kalachev</div>
-                            <div class="header__content-speciality">Frontend Developer</div>
+                            <h1 class="header__content-name">Nikita Kalachev</h1>
+                            <h2 class="header__content-speciality">Frontend Developer</h2>
                         </div>
                     </div>
                     <div class="header__contacts">
-                        <div class="header__contacts-location header__contacts-item">
-                            <img class="location-icon" src="images/header/location.png" alt="location icon">
-                            <p class="location-text ymaps-geolink" data-bounds="[[54.314214, 48.402297], [54.314483, 48.402568]]" data-description="Suppose I live here :)"  data-type="biz">Ulyanovsk, Russia</p>
-                        </div>
+                        <map class="header__contacts-location header__contacts-item">
+                            <svg class="contacts-location__icon header__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-location' /></svg>
+                            <p class="contacts-location__text ymaps-geolink" data-bounds="[[54.314214, 48.402297], [54.314483, 48.402568]]" data-description="Suppose I live nearby from here"  data-type="biz">Ulyanovsk, Russia</p>
+                        </map>
                         <div class="header__contacts-mail header__contacts-item">
-                            <img class="mail-icon" src="images/header/www.png" alt="mail icon">
-                            <p class="mail-text"><a target="_top" href="mailto:nikitakalachev@gmail.?Subject=Hello"></a>nikitakalachev18@gmail.com</a></p>
+                            <svg class="contacts-mail__icon header__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-www' /></svg>
+                            <address class="contacts-mail__text"><a target="_top" href="mailto:nikitakalachev@gmail.?Subject=Hello"></a>nikitakalachev18@gmail.com</a></address>
                         </div>
                         <div class="header__contacts-phone header__contacts-item">
-                            <img class="phone-icon" src="images/header/phone.png" alt="phone icon">
-                            <p class="phone-text"><a href="tel: +79969532147">+7 996 953 21 47</a></p>
+                            <svg class="contacts-phone__icon header__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-phone' /></svg>
+                            <p class="contacts-phone__text"><a href="tel: +79969532147">+7 996 953 21 47</a></p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="left-side">
+            </header>
+            <article class="left-side">
                 <div class="left-wrap">
             
-                    <div class="left__profile form-item__box">
+                    <section class="left__profile form-item__box">
                         <div class="left__profile-title">
                             <h2 class="form-text__title">Profile Info</h2>
                         </div>
                         <div class="left__profile-content">
-                            <p class="left__profile-text form-text__content">Dolor sit a quam erat volutpat. Ut wisi enim ad minim veniam, quis nostruduk cipit lobortis nislea quis commodo consequat. Quis nostruduk cipit lobortis nislea.</p>
+                            <p class="left__profile-text form-text__content">Creative Front-end Developer with 1+ year of experience designing, developing, and managing e-commerce sites, and solutions that drive business growth and improve UX.</p>
                         </div>
-                    </div>
+                    </section>
             
-                    <div class="left__interests form-item__box">
+                    <section class="left__interests form-item__box">
                         <div class="left__interests-title">
                             <h2 class="form-text__title">Interests</h2>
                         </div>
                         <div class="left__interests-content">
-                            <div class="left__interests-music">
-                                <img class="music-icon" src="images/left-side/music.png" alt="">
-                                <p class="music-text">Music</p>
+                            <div class="left__interests-item">
+                                <svg class="interests-music__icon interests__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-music' /><circle id="sprite-circle" /></svg>
+                                <p class="interests-content__text">Music</p>
                             </div>
-                            <div class="left__interests-gaming">
-                                <img class="gaming-icon" src="images/left-side/gaming.png" alt="">
-                                <p class="gaming-text">Gaming</p>
+                            <div class="left__interests-item">
+                                <svg class="interests-sport__icon interests__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-sport' /><circle id="sprite-circle" /></svg>
+                                <p class="interests-content__text">Sport</p>
                             </div>
-                            <div class="left__interests-biking">
-                                <img class="biking-icon" src="images/left-side/biking.png" alt="">
-                                <p class="biking-text">Biking</p>
+                            <div class="left__interests-item">
+                                <svg class="interests-hightech__icon interests__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-hightech' /><circle id="sprite-circle" /></svg>
+                                <p class="interests-content__text">HighTech</p>
+                            </div>
+                            <div class="left__interests-item">
+                                <svg class="interests-travel__icon interests__contacts-icon"><use xlink:href='images/form-sprite.svg#sprite-travel' /><circle id="sprite-circle" /></svg>
+                                <p class="interests-content__text">Travel</p>
                             </div>
                         </div>
-                    </div>
+                    </section>
             
-                    <div class="left__reference form-item__box">
+                    <section class="left__reference form-item__box">
                         <div class="left__reference-title">
                             <h2 class="form-text__title">Reference</h2>
                         </div>
@@ -94,25 +99,23 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
             
-                    <div class="left__awards form-item__box">
+                    <section class="left__awards form-item__box">
                         <div class="left__awards-title">
-                            <h2 class="form-text__title">Awards</h2>
+                            <h2 class="form-text__title">Cources</h2>
                         </div>
                         <div class="left__awards-content">
-                            <p class="left__awards-item">Illustation award 2009</p>
-                            <p class="left__awards-item">Web Design award 2012</p>
-                            <p class="left__awards-item">Elite award 20019</p>
+                            <p class="left__awards-item"><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/S7KMMKUGXK48" target="blank">"Web Design for Everybody"<a></p>
                         </div>
-                    </div>
+                    </section>
             
                 </div>
-            </section>
-            <section class="right-side">
+            </article>
+            <article class="right-side">
                 <div class="right-wrap">
             
-                    <div class="right__work form-item__box">
+                    <section class="right__work form-item__box">
                         <div class="right__work-title">
                             <h2 class="form-text__title">Work Experience</h2>
                         </div>
@@ -121,30 +124,33 @@
                                 <div class="form-shape__circle">
                                 </div>
                                 <div class="item--leftbar">
-                                    <p class="work-item__time">2000 - Present</p>
-                                    <p class="work-item__company ">UI/UX Designer</p>
-                                    <p class="work-item__position">Microsoft Corp.</p>
+                                    <p class="work-item__time">2018 - 2018</p>
+                                    <p class="work-item__company ">Frontend developer and design integrator</p>
+                                    <p class="work-item__position">Simtech Development</p>
                                 </div>
                                 <div class="item--rightbar">
-                                    <p class="work-item__description">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea cosequat.</p>
+                                    <p class="work-item__description">Design integration to CS-Cart e-commerse platform.
+                                        UX/UI store frontend optimization and increasing conversion rates for PageSpeed Insights and Google Analytics metrics.
+                                        Themes and addons setup and installation.
+                                        Addons development.</p>
                                 </div>
                             </div>
                             <div class="work-item">
                                 <div class="form-shape__circle">
                                 </div>
                                 <div class="item--leftbar">
-                                    <p class="work-item__time ">2000 - Present</p>
-                                    <p class="work-item__company">UI/UX Designer</p>
-                                    <p class="work-item__position">Microsoft Corp.</p>
+                                    <p class="work-item__time ">2017 - 2018</p>
+                                    <p class="work-item__company">HTML Developer</p>
+                                    <p class="work-item__position">ITECH.group</p>
                                 </div>
                                 <div class="item--rightbar">
-                                    <p class="work-item__description">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea cosequat.</p>
+                                    <p class="work-item__description">Sites frontend supporting: html/css tweaks and page layout additions with JS libs/plugins. Converting graphic mockups into HTML mockups.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
             
-                    <div class="right__education form-item__box">
+                    <section class="right__education form-item__box">
                         <div class="right__education-title">
                             <h2 class="form-text__title">Education</h2>
                         </div>
@@ -153,30 +159,30 @@
                                 <div class="form-shape__circle">
                                 </div>
                                 <div class="item--leftbar">
-                                    <p class="education-item__time">1999 - 2008</p>
-                                    <p class="education-item__company">High School</p>
-                                    <p class="education-item__position">Microsoft Corp.</p>
+                                    <p class="education-item__time">1997 - 2007</p>
+                                    <p class="education-item__company">High School Graduate</p>
+                                    <p class="education-item__position">Humanities Lyceum</p>
                                 </div>
                                 <div class="item--rightbar">
-                                    <p class="education-item__description">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea cosequat.</p>
+                                    <p class="education-item__description">Graduated from school with in-depth study of English.</p>
                                 </div>
                             </div>
                             <div class="education-item">
                                 <div class="form-shape__circle">
                                 </div>
                                 <div class="item--leftbar">
-                                    <p class="education-item__time">1999 - 2008</p>
-                                    <p class="education-item__company">High School</p>
-                                    <p class="education-item__position">Microsoft Corp.</p>
+                                    <p class="education-item__time">2007 - 2008</p>
+                                    <p class="education-item__company">Undergraduate education</p>
+                                    <p class="education-item__position">Ulyanovsk Technical Univercity</p>
                                 </div>
                                 <div class="item--rightbar">
-                                    <p class="education-item__description">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea cosequat.</p>
+                                    <p class="education-item__description">Had studied on the specialty "Management of the organization".</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
             
-                    <div class="right__skills form-item__box">
+                    <section class="right__skills form-item__box">
                         <div class="right__skills-title">
                             <h2 class="form-text__title">Professional Skills</h2>
                         </div>
@@ -210,12 +216,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
             
                 </div>
-            </section>
-        </div>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&load=Geolink"></script>
-    <script src="js/main.js">
+            </article>
+        </main>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&load=Geolink"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
